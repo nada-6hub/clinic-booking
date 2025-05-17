@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مركز تحرير الطبي</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section{
+    padding-top: 40px;
+  }
+  section .content{
+    width: 80%;
+    margin: 40px auto;
+  }
+  .about .about-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  section .title span{
+    color:blue;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    text-decoration: none;
+  }
+
+ section {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+ .about .about-details .left{
+            margin-right: auto;
+    width: 40%;
+  }
+  .about .left img{
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  .about-details .right{
+    width:50%;
+  }
+  section  .topic{
+    color: black;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font: bolder;
+  }
+  section .details{
+    text-align: justify;
+    color: #0E2431;
+    font-family: sans-serif;
+    font: bold;
+    font-size:18px ;
+  }
+  .about-details .right p{
+    text-align: justify;
+    color: #0E2431;
+  }
+  section .button{
+    margin: 16px 0;
+  }
+  section .button button{
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #666eb4;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.4s ease;
+  }
+  section .button button:hover{
+    border-color: #4070f4;
+    background-color: #fff;
+    color: #4070f4;
+  }
+        footer {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+   .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.service {
+  background-color: #e6f0fb;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+
+.service:hover {
+  transform:scale(1.5);
+}
+
+.service h3 {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #2a4a78;
+  text-decoration: none;
+
+}
+
+.service p {
+  font-size: 16px;
+  color: #333;
+}
+.service img {
+  width:fit-content ;
+  height:fit-content;
+  object-fit:fill;
+  margin-bottom: 5px;
+}
+**css for .booking-form
+.container {
+      max-width: 500px;
+      margin :50px auto;
+      background: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);   }
+label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+      color:black;
+      font-size: 20px;
+    }
+
+    input, select {
+  width: 80%;
+  padding: 6px 10px; /* تقليل المسافة الداخلية */
+  margin-bottom: 12px;
+  font-size: 20px;   /* تقليل حجم الخط */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+ 
+}
+   
+    button {
+      margin-top: 20px;
+      width: 80%;
+      padding: 12px;
+      color: black;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+        .contact-form, .booking-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form input, .contact-form textarea, .booking-form input, .booking-form select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button, .booking-form button {
+            background: #0077b6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>مركز تحرير الطبي</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">عن المركز</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#booking">الحجوزات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+</section>
+<section id="about" class="about">
+ <div class="content">
+     <div class="title"><span>رؤية مركز تحرير الطبي </span></div>
+     <div class="about-details">
+       <div class="left">
+         <img src="tahreer-logo.png - Shortcut.lnk" alt="about nada"  />
+         
+       </div>
+       <div class="right">
+         <h2>نسعى لأن نكون المركز الطبي الرائد في تقديم خدمات صحية متكاملة، متميزة، 
+           وذات جودة عالية</h2>
+           <h2> من خلال اعتماد أحدث التقنيات الطبية، وتقديم رعاية شاملة تضع المريض في قلب الاهتمام </h2>
+         </h2>
+         <h2>نطمح ان يكون مركز تحرير الطبي الوجهة الأولى للرعاية الصحية، عبر التميز الطبي والالتزام بأعلى المعايير العالمية، مع التركيز على سهولة الوصول إلى الخدمات، التطوير المستمر، وتعزيز الوعي الصحي في المجتمع المحلي  </h2>
+         <div class="button">
+           <button><a href="#"> facebook</button></a>
+           <button><a href="#"> instagram</button></a>
+            <button><a href="#"> whatsapp</button></a> </div>
+ </section>
+    <section id="services">
+        <div class="title"><span>خدمات مركز تحرير الطبي </span></div>
+        <div class="services-grid">
+            <div class="service">
+              <h3>الطوارئ</h3>
+              <img src="" alt="الطوارئ">
+              <p>خدمات إسعافية على مدار الساعة للحالات العاجلة </p>
+            </div>
+            <div class="service">
+              <h3>المختبر</h3>
+              <p>تحاليل طبية دقيقة تشمل الدم والهرمونات والمزيد</p>
+            </div>
+            <div class="service">
+              <h3>طب الأسنان</h3>
+              <p>علاج الأسنان، الحشوات، التقويم والعناية بالفم</p>
+            </div>
+            <div class="service">
+              <h3> النسائية و متابعة الحوامل</h3>
+              <p>متابعة الحوامل  وتشخيص أمراض النساء</p>
+            </div>
+            <div class="service">
+              <h3>الليزر والتجميل</h3>
+              <p>جلسات ليزر للعناية بالبشرة وإزالة الشعر</p>
+            </div>
+            <div class="service">
+              <h3>جراحة المسالك البولية</h3>
+              <p>تشخيص وعلاج أمراض الكلى والمثانة وعلاج العقم</p>
+            </div>
+            <div class="service">
+              <h3>التغذية العلاجية</h3>
+              <p>أنظمة غذائية للحالات الصحية المختلفة</p>
+            </div>
+            <div class="service">
+              <h3> خدمات طبية اضافية</h3>
+              <p>خدمات اضافية تصوير بانوراما اسنان وحجامه علاجيه واعطاء حديد بالوريد و سحب وحدات دم </p>
+            </div>
+          </div>
+    </section>
+    <section  id="booking">
+      <div class="title"><span>حجز موعد في مركز تحرير الطبي </span></div>
+    <div class="container" style="
+      max-width: 500px;
+      margin: 0 auto;
+    ">
+      <form id="bookingForm" action="https://formsubmit.co/nadamasarweh96@gmail.com" method="POST">
+        <label for="name">الاسم</label>
+        <input type="text" id="name" required placeholder="اكتب اسمك الكامل">
+  
+        <label for="phone">رقم الهاتف</label>
+        <input type="tel" id="phone" required placeholder="07XXXXXXXX">
+  
+        <label for="clinic">اختر العيادة</label>
+        <select id="clinic" required>
+          <option value="">-- اختر العيادة --</option>
+          <option value="النسائية">النسائية</option>
+          <option value="المسالك">المسالك البولية</option>
+          <option value="الليزر">الليزر والتجميل</option>
+          <option value="التغذية">التغذية</option>
+          <option value="الأسنان">الأسنان والتقويم</option>
+        </select>
+  
+        <label for="date">تاريخ الموعد</label>
+        <input type="date" id="date" required>
+  
+        <button type="submit">إتمام الحجز</button>
+      </form>
+    </div>
+    </section>
+    <section>
+      <div class="title"><span>الانشطه المجتمعية في مركز تحرير الطبي </span></div>
+
+    </section>
+    <section id="contact">
+      <div class="title"><span> تقييماتكم و تعليقاتكم الايجابية</span></div>
+
+        <h2>اتصل بنا</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="الاسم" required>
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <textarea placeholder="رسالتك" rows="4" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 مركز تحرير الطبي. جميع الحقوق محفوظة.</p>
+    </footer>
+    <script>
+      document.getElementById("bookingForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const clinic = document.getElementById("clinic").value;
+        const date = document.getElementById("date").value;
+  
+        if (name && phone && clinic && date) {
+          alert("تم حجز موعدك بنجاح في عيادة " + clinic + " بتاريخ " + date + "، شكرًا لك!");
+          // يمكن إرسال البيانات إلى الخادم هنا باستخدام fetch() أو Ajax
+          this.reset();
+        } else {
+          alert("يرجى تعبئة جميع الحقول.");
+        }
+      });
+  
+      document.getElementById("bookingForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+      
+        const form = e.target;
+      
+        const formData = {
+          name: form.name.value,
+          phone: form.phone.value,
+          clinic: form.clinic.value,
+          date: form.date.value
+        };
+      
+        fetch("https://script.google.com/macros/s/AKfycbzlAPsrgmGRAZErBQ4h9o7bXSViaexh6BhZFUtIHBdHg5qT0-4yI0lyX7EKx7Ne_RPAbg/exec", {
+          method: "POST",
+          body: JSON.stringify(formData),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }).then(response => {
+          if (response.ok) {
+            alert("✅ تم إرسال الحجز بنجاح!");
+            form.reset(); // لتفريغ الحقول بعد الإرسال
+          } else {
+            alert("❌ فشل في الإرسال. حاول مرة أخرى.");
+          }
+        }).catch(error => {
+          alert("⚠️ حدث خطأ: " + error.message);
+          console.error(error);
+        });
+      });
+      </script>
+  
+</body>
+</html>
