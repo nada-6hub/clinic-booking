@@ -31,7 +31,7 @@
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 25px;
         }
         section{
     padding-top: 40px;
@@ -97,6 +97,26 @@
   .about-details .right p{
     text-align: justify;
     color: #0E2431;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* المسافة بين الأزرار */
+    margin-top: 20px;
+  }
+
+  .button-group a button {
+    padding: 25px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+
+  .button-group a button:hover {
+    background-color: blue;
   }
   section .button{
     margin: 16px 0;
@@ -253,10 +273,11 @@ label {
            <h2> من خلال اعتماد أحدث التقنيات الطبية، وتقديم رعاية شاملة تضع المريض في قلب الاهتمام </h2>
          </h2>
          <h2>نطمح ان يكون مركز تحرير الطبي الوجهة الأولى للرعاية الصحية، عبر التميز الطبي والالتزام بأعلى المعايير العالمية، مع التركيز على سهولة الوصول إلى الخدمات، التطوير المستمر، وتعزيز الوعي الصحي في المجتمع المحلي  </h2>
-         <div class="button">
-           <button><a href="#"> facebook</button></a>
-           <button><a href="#"> instagram</button></a>
-            <button><a href="#"> whatsapp</button></a> </div>
+         <div class="button-group">
+          <a href="#"><button>Facebook</button></a>
+          <a href="#"><button>Instagram</button></a>
+          <a href="#"><button>Whatsapp</button></a>
+        </div>
  </section>
     <section id="services">
         <div class="title"><span>خدمات مركز تحرير الطبي </span></div>
@@ -296,50 +317,66 @@ label {
             </div>
           </div>
     </section>
-    <section  id="booking">
-      <div class="title"><span>حجز موعد في مركز تحرير الطبي </span></div>
-    <div class="container" style="
-      max-width: 500px;
-      margin: 0 auto;
-    ">
-      <form id="bookingForm" action="https://formsubmit.co/nadamasarweh96@gmail.com" method="POST">
-        <label for="name">الاسم</label>
-        <input type="text" id="name" required placeholder="اكتب اسمك الكامل">
-  
-        <label for="phone">رقم الهاتف</label>
-        <input type="tel" id="phone" required placeholder="07XXXXXXXX">
-  
-        <label for="clinic">اختر العيادة</label>
-        <select id="clinic" required>
-          <option value="">-- اختر العيادة --</option>
-          <option value="النسائية">النسائية</option>
-          <option value="المسالك">المسالك البولية</option>
-          <option value="الليزر">الليزر والتجميل</option>
-          <option value="التغذية">التغذية</option>
-          <option value="الأسنان">الأسنان والتقويم</option>
-        </select>
-  
-        <label for="date">تاريخ الموعد</label>
-        <input type="date" id="date" required>
-  
-        <button type="submit">إتمام الحجز</button>
-      </form>
-    </div>
+    <section id="booking">
+      <div class="title"><span>حجز موعد في مركز تحرير الطبي</span></div>
+      <div class="container" style="max-width: 500px; margin: 0 auto;">
+        <form id="bookingForm">
+          <label for="name">الاسم</label>
+          <input type="text" id="name" name="name" required placeholder="اكتب اسمك الكامل">
+    
+          <label for="phone">رقم الهاتف</label>
+          <input type="tel" id="phone" name="phone" required placeholder="07XXXXXXXX">
+    
+          <label for="clinic">اختر العيادة</label>
+          <select id="clinic" name="clinic" required>
+            <option value="">-- اختر العيادة --</option>
+            <option value="النسائية">النسائية</option>
+            <option value="المسالك">المسالك البولية</option>
+            <option value="الليزر">الليزر والتجميل</option>
+            <option value="التغذية">التغذية</option>
+            <option value="الأسنان">الأسنان والتقويم</option>
+          </select>
+    
+          <label for="date">تاريخ الموعد</label>
+          <input type="date" id="date" name="date" required>
+    
+          <button type="submit">إتمام الحجز</button>
+        </form>
+    
+        <p id="responseMsg" style="margin-top: 15px; color: green;"></p>
+      </div>
     </section>
-    <section>
+    <!--section>
       <div class="title"><span>الانشطه المجتمعية في مركز تحرير الطبي </span></div>
 
-    </section>
-    <section id="contact">
-      <div class="title"><span> تقييماتكم و تعليقاتكم الايجابية</span></div>
+    </section-->
+<section id="contact">
+      <div class="title"><span> اتــصل بنا</span></div>
 
-        <h2>اتصل بنا</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="الاسم" required>
-            <input type="email" placeholder="البريد الإلكتروني" required>
-            <textarea placeholder="رسالتك" rows="4" required></textarea>
-            <button type="submit">إرسال</button>
-        </form>
+    <div id="contact-section" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; padding: 40px; background-color: #f9f9f9;">
+  <!-- النموذج -->
+  <div style="flex: 1; min-width: 300px; max-width: 400px;">
+    <h2 style="text-align: right;">اتصل بنا</h2>
+    <form>
+      <input type="text" placeholder="الاسم" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;">
+      <input type="email" placeholder="البريد الإلكتروني" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;">
+      <textarea placeholder="رسالتك" rows="4" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+      <button type="submit" style="width: 100%; padding: 12px; background-color: #007BFF; color: white; border: none; border-radius: 6px; font-size: 16px;">إرسال</button>
+    </form>
+  </div>
+
+  <!-- معلومات المركز والخريطة -->
+  <div style="flex: 1; min-width: 300px; max-width: 500px;">
+    <h2 style="text-align: right;">موقعنا</h2>
+    <p><strong>📍 العنوان:</strong> الكرك - الأردن</p>
+    <p><strong>📞 الهاتف:</strong> 0790 123 456</p>
+    <p><strong>✉️ البريد الإلكتروني:</strong> info@tahreer-center.com</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.8520496181054!2d35.7407866756031!3d31.307834074311998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x150365182ce49c65%3A0x8486f0f705f1febc!2z2YXYsdmD2LIg2KrYrdix2YrYsSDYp9mE2LfYqNmK!5e0!3m2!1sen!2sjo!4v1748975503814!5m2!1sen!2sjo"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+</div>
     </section>
     
     <footer>
@@ -393,6 +430,38 @@ label {
         });
       });
       </script>
-  
+  <script>
+      const form = document.getElementById("bookingForm");
+      const responseMsg = document.getElementById("responseMsg");
+    
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+    
+        const data = {
+          name: form.name.value,
+          phone: form.phone.value,
+          clinic: form.clinic.value,
+          date: form.date.value
+        };
+    
+        try {
+          const response = await fetch("https://script.google.com/macros/s/AKfycbzlAPsrgmGRAZErBQ4h9o7bXSViaexh6BhZFUtIHBdHg5qT0-4yI0lyX7EKx7Ne_RPAbg/exec", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+          });
+    
+          const result = await response.text();
+          responseMsg.textContent = result;
+          form.reset();
+        } catch (error) {
+          responseMsg.textContent = "حدث خطأ أثناء إرسال الطلب، حاول مرة أخرى.";
+          responseMsg.style.color = "red";
+        }
+      });
+    </script>
+    
 </body>
 </html>
